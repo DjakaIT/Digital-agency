@@ -1,8 +1,3 @@
-# React + Vite
+# Digital-agency
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A project which fetches data from a endpoint api of an digital agency, and showcases data in a react project component. It was strictly said that back logic is more important, and design requirements were narrowed down to "just make it responsive, that's all that is asked, considering front - end part.". So, that is what I've done.
