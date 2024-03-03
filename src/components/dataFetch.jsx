@@ -1,11 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 export default function dataFetch(){
 
   const [apartments, setApartments] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
+  
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [guests, setGuests] = useState(null);
+  const [selectedAmenities, setSelectedAmenities] = useState([]);
+
+
 
   useEffect(() => {
       const controller = new AbortController();
@@ -46,6 +53,11 @@ export default function dataFetch(){
         [apartmentId]: !prevExpanded[apartmentId],
     }));
   }
+
+
+  function calculatePriceByDate(){
+
+  }
  
 
     return(
@@ -77,12 +89,14 @@ export default function dataFetch(){
                                 <h3>Pricelist and dates:</h3>
                                 <p>Prices: {priceListMinMaX(apartment)}</p>
                                 <p>Available dates: {apartment.availableDates.intervalStart}</p>
+                                <Link to="/reserved"><button>Rezerviraj</button></Link> 
                             </>
                         )}
-                       
+                        
                     </div>
                 </div>
             ))}
+            
         </div>
     );
 }

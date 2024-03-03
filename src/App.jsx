@@ -1,11 +1,12 @@
-import { useState } from 'react'
 import DataFetch from './components/dataFetch'
+import { Outlet } from 'react-router-dom'
 
 export default function App() {
 
   return (
     <>
       <DataFetch />
+      
     </>
   )
 }
